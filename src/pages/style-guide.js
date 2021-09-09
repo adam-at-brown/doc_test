@@ -16,9 +16,10 @@ export default function SecondPage({ data }) {
     <h1>Style Guide</h1>
     <p>these are good things we have done, please look.</p>
     <ul>
-    {stylePaths.map(path => {
-      return <li><Link key={path} to={`/style-guide/${path}`}>{path}</Link></li>
-    })}
+      <li><Link to="/colors">Color Palette</Link></li>
+      {stylePaths.map(path => {
+        return <li><Link key={path} to={`/style-guide/${path}`}>{path}</Link></li>
+      })}
     </ul>
   </Layout>
 )}

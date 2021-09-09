@@ -4,24 +4,24 @@ import { Link } from "gatsby"
 
 const navItems = [
   {
-    name: "Build & Deploy",
-    link: "/builds"
-  },
-  {
-    name: "Contributing",
-    link: "/contributing"
-  },
-  {
     name: "Getting Started",
-    link: "/getting-started"
+    link: "/getting-started",
   },
   {
     name: "Style Guide",
-    link: "/style-guide"
+    link: "/style-guide",
+  },
+  {
+    name: "Contributing",
+    link: "/contributing",
   },
   {
     name: "LifeRay",
-    link: "/liferay"
+    link: "/liferay",
+  },
+  {
+    name: "Build & Deploy",
+    link: "/builds",
   },
 ]
 
@@ -51,9 +51,25 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-    <nav style={{ display: "flex", justifyContent: "space-between", maxWidth: "900px", margin: "auto", padding: "1rem 0 2rem 0"}}>
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        maxWidth: "900px",
+        margin: "auto",
+        padding: "1rem 0 2rem 0",
+      }}
+    >
       {navItems.map(link => {
-        return <Link key={link.name} to={link.link} style={{ color: "white", fontWeight: 700 }}>{link.name}</Link>
+        return (
+          <Link
+            key={link.name}
+            to={link.link}
+            style={{ color: "white", fontWeight: 700 }}
+          >
+            {link.name}
+          </Link>
+        )
       })}
     </nav>
   </header>
