@@ -35,6 +35,7 @@ function Seo({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      link={{rel: "stylesheet", href: "https://unpkg.com/@picocss/pico@latest/css/pico.min.css"}}
       meta={[
         {
           name: `description`,
