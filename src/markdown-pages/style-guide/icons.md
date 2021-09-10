@@ -9,7 +9,7 @@ Text with icons can be added to text areas to denote characteristics (for exampl
 * Text 14pt circular generalText
 * Icons are 15px largest dimension
 
-<img src="../images/icon_with_text.png" alt="icon inline with text" />
+<img src="../../images/icon_with_text.png" alt="icon inline with text" />
 
 ## Commonly Used Icons
 
