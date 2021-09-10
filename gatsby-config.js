@@ -32,62 +32,55 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `markdown-pages`,
-          path: `${__dirname}/src/markdown-pages`,
-        },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `style-pages`,
-          path: `${__dirname}/src/markdown-pages/style-guide`,
-        },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `liferay-pages`,
-          path: `${__dirname}/src/markdown-pages/liferay`,
-        },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `builds-pages`,
-          path: `${__dirname}/src/markdown-pages/builds`,
-        },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `dependencies-pages`,
-          path: `${__dirname}/src/markdown-pages/dependencies`,
-        },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `images`,
-          path: `${__dirname}/src/images`,
-        },
-    },
-    {
-  resolve: `gatsby-transformer-remark`,
-  options: {
-    plugins: [
-      {
-        resolve: `gatsby-remark-images`,
-        options: {
-          // It's important to specify the maxWidth (in pixels) of
-          // the content container as this plugin uses this as the
-          // base for generating different widths of each image.
-          maxWidth: 1200,
-        },
+      options: {
+        name: `style-pages`,
+        path: `${__dirname}/src/markdown-pages/style-guide`,
       },
-    ],
-  },
-},
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `liferay-pages`,
+        path: `${__dirname}/src/markdown-pages/liferay`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `builds-pages`,
+        path: `${__dirname}/src/markdown-pages/builds`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `dependencies-pages`,
+        path: `${__dirname}/src/markdown-pages/dependencies`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
