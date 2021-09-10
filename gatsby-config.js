@@ -41,7 +41,28 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
         options: {
           name: `style-pages`,
-          path: `${__dirname}/src/style-pages`,
+          path: `${__dirname}/src/markdown-pages/style-guide`,
+        },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `liferay-pages`,
+          path: `${__dirname}/src/markdown-pages/liferay`,
+        },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `builds-pages`,
+          path: `${__dirname}/src/markdown-pages/builds`,
+        },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `dependencies-pages`,
+          path: `${__dirname}/src/markdown-pages/dependencies`,
         },
     },
     {

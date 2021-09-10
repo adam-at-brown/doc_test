@@ -4,9 +4,10 @@ import Seo from "../components/seo"
 
 export default function GettingStartedPage() {
   return (
-  <Layout>
-    <Seo title="Getting Started Guide" />
-    <h1>Getting Started Guide</h1>
-    <p>TK</p>
-  </Layout>
-)}
+    <Layout>
+      <Seo title="Getting Started Guide" />
+      <h1>Getting Started Guide</h1>
+      <p>TK</p>
+    </Layout>
+  )
+}

@@ -1,5 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import { Link } from "gatsby"
 
 const navItems = [
@@ -16,29 +17,28 @@ const navItems = [
     link: "/contributing",
   },
   {
-    name: "LifeRay",
+    name: "LifeRay (CMS)",
     link: "/liferay",
   },
   {
     name: "Build & Deploy",
     link: "/builds",
   },
+  {
+    name: "Dependencies",
+    link: "/dependencies",
+  },
 ]
 
-const Header = ({ siteTitle }) => (
+export default function Header({ siteTitle }) {
+  return(
   <header
     style={{
       background: `#4e3629`,
       marginBottom: `1.45rem`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+    <TitleWrap>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -50,30 +50,21 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        maxWidth: "900px",
-        margin: "auto",
-        padding: "1rem 0 2rem 0",
-      }}
-    >
+    </TitleWrap>
+    <Nav>
       {navItems.map(link => {
         return (
           <Link
             key={link.name}
             to={link.link}
-            style={{ color: "white", fontWeight: 700 }}
           >
             {link.name}
           </Link>
         )
       })}
-    </nav>
+    </Nav>
   </header>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -83,4 +74,38 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: auto;
+  padding: 1rem 0 2rem 0;
+
+  a {
+    color: white;
+    font-weight: 700;
+  }
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+
+    a {
+      margin: 10px;
+      padding: 0;
+    }
+  }
+`
+
+const TitleWrap = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 0;
+
+@media(max-width: 768px) {
+  padding-left: 1rem;
+}
+`

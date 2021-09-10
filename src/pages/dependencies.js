@@ -4,20 +4,20 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { filterPaths, kebabToTitleCase } from "../helpers"
 
-export default function BuildsPage({ data }) {
+export default function DependenciesPage({ data }) {
   const { allSitePage } = data
   const { distinct } = allSitePage
-  const paths = filterPaths(distinct, "builds")
+  const paths = filterPaths(distinct, "dependencies")
 
   return (
     <Layout>
-      <Seo title="Builds & Deployment Guide" />
-      <h1>Builds & Deployment Guide</h1>
+      <Seo title="Dependencies Guide" />
+      <h1>Dependencies Guide</h1>
       <ul>
         {paths.map(path => {
           return (
             <li key={path}>
-              <Link key={path} to={`/builds/${path}`}>
+              <Link key={path} to={`/dependencies/${path}`}>
                 {kebabToTitleCase(path)}
               </Link>
             </li>
@@ -29,7 +29,7 @@ export default function BuildsPage({ data }) {
 }
 
 export const navQuery = graphql`
-  query BuildsQuery {
+  query DependenciesQuery {
     allSitePage {
       distinct(field: path)
     }

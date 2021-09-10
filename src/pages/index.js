@@ -4,7 +4,8 @@ import Seo from "../components/seo"
 
 export default function IndexPage() {
   return (
-  <Layout>
-    <Seo title="Home" />
-  </Layout>
-)}
+    <Layout>
+      <Seo title="Home" />
+    </Layout>
+  )
+}

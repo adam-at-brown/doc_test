@@ -4,9 +4,10 @@ import Seo from "../components/seo"
 
 export default function ContributingPage() {
   return (
-  <Layout>
-    <Seo title="Contributing Guide" />
-    <h1>Contributing Guide</h1>
-    <p>TK</p>
-  </Layout>
-)}
+    <Layout>
+      <Seo title="Contributing Guide" />
+      <h1>Contributing Guide</h1>
+      <p>TK</p>
+    </Layout>
+  )
+}
