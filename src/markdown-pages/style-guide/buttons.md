@@ -33,6 +33,8 @@ title: "Buttons"
   * Icon buttons
     * Bookmark (future)
 
-    ![page header](../../images/standard_button_lm.png)
+![standard button in light mode](../../images/standard_button_lm.png)
+standard button in light mode
 
-    ![page header](../../images/standard_button_dm.png)
+![standard button in dark mode](../../images/standard_button_dm.png)
+standard button in dark mode

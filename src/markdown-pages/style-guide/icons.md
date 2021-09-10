@@ -2,6 +2,17 @@
 slug: "/style_guide/icons"
 title: "Icons"
 ---
+## Component `Icon`
+
+### Props
+* icon - string - required
+* size - number - required
+* theme - required
+* iconStyle - object of ImageStyle & { color: string } - optional
+* onPress - function - optional
+* role - string - optional
+* accessibilityLabel - string - optional
+* disabled - boolean - optional
 
 ## Text with Icons
 
